@@ -32,9 +32,9 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0" aria-label="Blue Liberty home">
+        <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="Blue Liberty home">
           <BlueLibertyLogo />
-          <span className="font-display font-bold text-ink text-[15px] tracking-[0.08em] uppercase">
+          <span className="font-display font-extrabold text-ink text-[15px] tracking-[0.12em] uppercase">
             Blue Liberty
           </span>
         </Link>
@@ -103,28 +103,47 @@ export default function Navbar() {
 
 function BlueLibertyLogo() {
   return (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <rect width="32" height="32" rx="8" fill="#0C176D" />
-      {/* Stylized B with roofline */}
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+      {/* Rounded square background */}
+      <rect width="36" height="36" rx="9" fill="#0C176D" />
+
+      {/* === B LETTERMARK === */}
+      {/* Left vertical bar */}
+      <rect x="8" y="8" width="4" height="20" rx="1" fill="white" />
+
+      {/* Upper bump of B */}
       <path
-        d="M9 8h8.5c2.5 0 4.5 1.8 4.5 4 0 1.2-.5 2.2-1.4 2.9C22.1 15.6 23 16.8 23 18.2 23 20.8 20.8 23 18 23H9V8z"
+        d="M12 8 h4 a5 5 0 0 1 0 10 h-4 z"
         fill="white"
-        fillOpacity="0.95"
       />
-      {/* Horizontal stripes (B inner) */}
-      <rect x="9" y="8" width="7" height="2" rx="0" fill="#0C176D" />
-      <rect x="9" y="14.5" width="7" height="2" rx="0" fill="#0C176D" />
-      <rect x="9" y="21" width="7" height="2" rx="0" fill="#0C176D" />
-      {/* Palm frond accent */}
+      {/* Upper bump inner cutout */}
       <path
-        d="M20 7 Q22 5 24 7 Q22 8 20 7z"
+        d="M12 10 h3.5 a3 3 0 0 1 0 6 h-3.5 z"
+        fill="#0C176D"
+      />
+
+      {/* Lower bump of B */}
+      <path
+        d="M12 18 h4.5 a6 6 0 0 1 0 10 h-4.5 z"
+        fill="white"
+      />
+      {/* Lower bump inner cutout */}
+      <path
+        d="M12 20 h4 a4 4 0 0 1 0 6 h-4 z"
+        fill="#0C176D"
+      />
+
+      {/* === PALM FROND ACCENT (top-right of B) === */}
+      {/* Main frond leaf */}
+      <path
+        d="M21 9 Q24 6 27 8 Q25 11 21 9 Z"
         fill="#0FA8FF"
-        fillOpacity="0.9"
       />
+      {/* Secondary frond leaf */}
       <path
-        d="M22 6 Q25 5 26 8 Q23.5 7.5 22 6z"
+        d="M23 7 Q27 5 28 9 Q25.5 9 23 7 Z"
         fill="#84C6FF"
-        fillOpacity="0.8"
+        fillOpacity="0.85"
       />
     </svg>
   );
