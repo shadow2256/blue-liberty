@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const footerLinks = {
   Marketplace: ["How It Works", "Demo", "Properties", "Invest", "FAQ"],
   Properties: ["Cities", "Tiers", "Strategies", "Services", "Stock Summary"],
@@ -16,11 +18,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <FooterLogo />
-              <span className="font-display font-bold text-white text-[14px] tracking-[0.08em] uppercase">
-                Blue Liberty
-              </span>
+            <div className="mb-4">
+              <Image src="/bluelib-logo.png" alt="Blue Liberty" width={100} height={40} className="brightness-0 invert" />
             </div>
             <p className="text-white/40 text-[12.5px] leading-relaxed max-w-[260px]">
               Blue Liberty combines premium property access with a cleaner, more modern
@@ -75,24 +74,6 @@ export default function Footer() {
   );
 }
 
-function FooterLogo() {
-  return (
-    <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-      <rect width="36" height="36" rx="9" fill="white" fillOpacity="0.12" />
-      {/* Left vertical bar */}
-      <rect x="8" y="8" width="4" height="20" rx="1" fill="white" fillOpacity="0.9" />
-      {/* Upper bump */}
-      <path d="M12 8 h4 a5 5 0 0 1 0 10 h-4 z" fill="white" fillOpacity="0.9" />
-      <path d="M12 10 h3.5 a3 3 0 0 1 0 6 h-3.5 z" fill="#060D2E" />
-      {/* Lower bump */}
-      <path d="M12 18 h4.5 a6 6 0 0 1 0 10 h-4.5 z" fill="white" fillOpacity="0.9" />
-      <path d="M12 20 h4 a4 4 0 0 1 0 6 h-4 z" fill="#060D2E" />
-      {/* Palm frond */}
-      <path d="M21 9 Q24 6 27 8 Q25 11 21 9 Z" fill="#0FA8FF" />
-      <path d="M23 7 Q27 5 28 9 Q25.5 9 23 7 Z" fill="#84C6FF" fillOpacity="0.8" />
-    </svg>
-  );
-}
 
 const socialLinks = [
   {
