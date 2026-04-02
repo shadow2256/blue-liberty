@@ -18,7 +18,7 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
   }, []);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center pt-16 overflow-hidden bg-gradient-to-br from-mist via-salt-white to-mist">
+    <section className="relative min-h-[100svh] flex items-center pt-16 overflow-hidden bg-white">
       {/* Subtle background grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-30"

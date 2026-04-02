@@ -35,6 +35,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center shrink-0" aria-label="Blue Liberty home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bluelib-logo.png`} alt="Blue Liberty" style={{ height: "48px", width: "auto" }} />
+          <span className="ml-2.5 font-display font-bold text-[17px] tracking-tight text-ink">Blue Liberty</span>
         </Link>
 
         {/* Desktop nav */}

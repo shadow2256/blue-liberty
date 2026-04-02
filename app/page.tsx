@@ -24,15 +24,8 @@ export default function HomePage() {
         <TrustBar />
         <HowItWorks />
 
-        {/* Split section: properties left, benefits right */}
-        <section className="bg-white" id="invest">
-          <div className="max-w-7xl mx-auto px-0">
-            <div className="grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate/15">
-              <PropertyListings />
-              <Benefits onWaitlist={() => setWaitlistOpen(true)} />
-            </div>
-          </div>
-        </section>
+        <PropertyListings />
+        <Benefits onWaitlist={() => setWaitlistOpen(true)} />
 
         <Testimonials />
 
