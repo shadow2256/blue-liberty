@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <Image src="/bluelib-logo.png" alt="Blue Liberty" width={100} height={40} className="brightness-0 invert" />
+              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/bluelib-logo.png`} alt="Blue Liberty" width={100} height={40} className="brightness-0 invert" />
             </div>
             <p className="text-white/40 text-[12.5px] leading-relaxed max-w-[260px]">
               Blue Liberty combines premium property access with a cleaner, more modern
