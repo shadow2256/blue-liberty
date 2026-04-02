@@ -103,47 +103,59 @@ export default function Navbar() {
 
 function BlueLibertyLogo() {
   return (
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-      {/* Rounded square background */}
-      <rect width="36" height="36" rx="9" fill="#0C176D" />
+    <svg width="36" height="44" viewBox="0 0 72 88" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="nav-b-grad" x1="0" y1="0" x2="72" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#2B5CAD" />
+          <stop offset="55%" stopColor="#6FA0D8" />
+          <stop offset="100%" stopColor="#B8D4EE" />
+        </linearGradient>
+      </defs>
 
-      {/* === B LETTERMARK === */}
-      {/* Left vertical bar */}
-      <rect x="8" y="8" width="4" height="20" rx="1" fill="white" />
+      {/* B letterform — fill-rule evenodd cuts out the two bowls */}
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="
+          M 4 4 L 44 4
+          C 58 4 68 13 68 24
+          C 68 33 63 39 55 42
+          C 64 46 70 54 70 64
+          C 70 76 60 84 44 84
+          L 4 84 Z
 
-      {/* Upper bump of B */}
-      <path
-        d="M12 8 h4 a5 5 0 0 1 0 10 h-4 z"
-        fill="white"
-      />
-      {/* Upper bump inner cutout */}
-      <path
-        d="M12 10 h3.5 a3 3 0 0 1 0 6 h-3.5 z"
-        fill="#0C176D"
+          M 16 15 L 41 15
+          C 49 15 55 21 55 27
+          C 55 33 49 39 41 39
+          L 16 39 Z
+
+          M 16 49 L 43 49
+          C 53 49 59 55 59 63
+          C 59 71 53 77 43 77
+          L 16 77 Z
+        "
+        fill="url(#nav-b-grad)"
       />
 
-      {/* Lower bump of B */}
-      <path
-        d="M12 18 h4.5 a6 6 0 0 1 0 10 h-4.5 z"
-        fill="white"
-      />
-      {/* Lower bump inner cutout */}
-      <path
-        d="M12 20 h4 a4 4 0 0 1 0 6 h-4 z"
-        fill="#0C176D"
-      />
+      {/* Palm trunk */}
+      <line x1="35" y1="72" x2="35" y2="18" stroke="#0C176D" strokeWidth="2.5" strokeLinecap="round" />
 
-      {/* === PALM FROND ACCENT (top-right of B) === */}
-      {/* Main frond leaf */}
+      {/* Palm fronds fanning out from top of trunk */}
+      <path d="M35 20 Q22 10 11 17" stroke="#0C176D" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+      <path d="M35 20 Q28 7 29 1"  stroke="#0C176D" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+      <path d="M35 20 Q40 6 44 1"  stroke="#0C176D" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+      <path d="M35 20 Q48 10 58 15" stroke="#0C176D" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+      <path d="M35 20 Q50 15 57 10" stroke="#0C176D" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+      <path d="M35 20 Q19 15 13 10" stroke="#0C176D" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+
+      {/* Roofline chevron — sits in the lower bowl */}
       <path
-        d="M21 9 Q24 6 27 8 Q25 11 21 9 Z"
-        fill="#0FA8FF"
-      />
-      {/* Secondary frond leaf */}
-      <path
-        d="M23 7 Q27 5 28 9 Q25.5 9 23 7 Z"
-        fill="#84C6FF"
-        fillOpacity="0.85"
+        d="M20 76 L35 58 L50 76"
+        stroke="#0C176D"
+        strokeWidth="4"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
