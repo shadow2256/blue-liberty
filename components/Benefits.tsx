@@ -135,7 +135,7 @@ export default function Benefits({ onWaitlist }: { onWaitlist: () => void }) {
             </p>
             <button
               onClick={onWaitlist}
-              className="inline-flex items-center px-7 py-3.5 rounded-xl bg-royal text-white font-semibold text-[14px] shadow-royal hover:shadow-royal-lg hover:bg-[#1a47f0] transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center px-7 py-3.5 rounded-xl bg-white text-royal font-bold text-[14px] shadow-lg hover:bg-mist transition-all duration-200 cursor-pointer"
             >
               View Opportunities
             </button>

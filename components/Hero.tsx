@@ -21,12 +21,25 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
     <section className="relative min-h-[100svh] flex items-center pt-16 overflow-hidden bg-white">
       {/* Subtle background grid */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-30"
+        className="absolute inset-0 pointer-events-none opacity-20"
         style={{
-          backgroundImage: `linear-gradient(rgba(12,23,109,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(12,23,109,0.04) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(12,23,109,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(12,23,109,0.05) 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
         }}
       />
+
+      {/* Brand glow — right side behind cards */}
+      <div className="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-royal/6 blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 rounded-full bg-horizon/8 blur-3xl" />
+      </div>
+
+      {/* Roofline accent — top right corner */}
+      <svg className="absolute top-16 right-0 w-64 h-48 pointer-events-none opacity-[0.035]" viewBox="0 0 256 192" fill="none" aria-hidden="true">
+        <path d="M256 96 L192 32 L128 96 L192 96" stroke="#0C176D" strokeWidth="1.5" fill="none" />
+        <path d="M256 140 L164 48 L72 140 L164 140" stroke="#2F5BFF" strokeWidth="1" fill="none" />
+        <path d="M256 184 L136 64 L16 184 L136 184" stroke="#0FA8FF" strokeWidth="0.75" fill="none" />
+      </svg>
 
       {/* Horizon line accent */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate/40 to-transparent" />

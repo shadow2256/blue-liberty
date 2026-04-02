@@ -30,7 +30,7 @@ export default function HomePage() {
         <Testimonials />
 
         {/* Waitlist section anchor */}
-        <section id="waitlist" className="py-20 bg-gradient-to-br from-mist via-salt-white to-mist">
+        <section id="waitlist" className="py-20 bg-white border-t border-slate/10">
           <div className="max-w-3xl mx-auto px-6 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-royal/10 border border-royal/20 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-royal animate-pulse" />

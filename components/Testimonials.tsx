@@ -1,33 +1,44 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
     quote:
-      "Blue Liberty combines premium property access with broad accents and professional estate dominance, beautiful, transparent access to real fractional assets.",
-    name: "Immae Rames",
-    role: "Early Investor",
-    avatar: "IR",
+      "Blue Liberty gives me access to premium Florida real estate I couldn't touch before. Completely transparent, real assets — this is the future of property investing.",
+    name: "James R.",
+    role: "Early Investor · Miami, FL",
+    avatar: "JR",
     color: "bg-royal",
   },
   {
     quote:
-      "Blue Liberty communicates results for estate connections and owners, also expansive Florida properties techniques and more. A genuinely modern experience.",
-    name: "Numed Nomes",
-    role: "Property Investor",
-    avatar: "NN",
+      "I've tried other platforms but nothing matches the clarity and quality here. The yield tracking is straightforward and the properties are genuinely curated.",
+    name: "Sophia M.",
+    role: "Property Investor · Tampa, FL",
+    avatar: "SM",
     color: "bg-ink",
   },
   {
     quote:
-      "Blue Liberty combines premium property access with a cleaner, more modern ownership experience. The yield transparency is unmatched.",
-    name: "Michael Johnson",
-    role: "Portfolio Builder",
+      "Fractional ownership used to feel risky. Blue Liberty changed that — the documentation and ownership structure gives me real confidence in every investment.",
+    name: "Michael J.",
+    role: "Portfolio Builder · Orlando, FL",
     avatar: "MJ",
     color: "bg-horizon",
   },
 ];
+
+function StarRow() {
+  return (
+    <div className="flex gap-0.5 mb-4">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} className="w-3.5 h-3.5 text-royal fill-royal" />
+      ))}
+    </div>
+  );
+}
 
 export default function Testimonials() {
   const [active, setActive] = useState(0);
@@ -43,17 +54,19 @@ export default function Testimonials() {
     return () => obs.disconnect();
   }, []);
 
-  // Auto-advance carousel
   useEffect(() => {
     const t = setInterval(() => setActive((a) => (a + 1) % testimonials.length), 5000);
     return () => clearInterval(t);
   }, []);
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="about" ref={ref} className="py-24 bg-mist">
+      {/* Top horizon line */}
+      <div className="h-px bg-gradient-to-r from-transparent via-slate/30 to-transparent mb-0" />
+
+      <div className="max-w-5xl mx-auto px-6">
         <p className="text-[10.5px] font-bold text-ink/30 uppercase tracking-[0.2em] mb-3 text-center">
-          Testimonials
+          Investor Stories
         </p>
         <h2
           className="font-display font-extrabold text-ink text-4xl md:text-5xl text-center leading-tight tracking-tight mb-14 transition-all duration-700"
@@ -62,32 +75,31 @@ export default function Testimonials() {
           Built for Real Confidence
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {testimonials.map((t, i) => (
             <div
               key={t.name}
               className={`relative bg-white rounded-2xl border p-6 shadow-card cursor-pointer transition-all duration-300 ${
                 active === i
-                  ? "border-royal shadow-card-hover scale-[1.02]"
-                  : "border-slate/20 hover:border-royal/40"
+                  ? "border-royal shadow-card-hover -translate-y-1"
+                  : "border-white hover:border-royal/30 hover:-translate-y-0.5"
               }`}
               onClick={() => setActive(i)}
               style={{
                 opacity: visible ? 1 : 0,
-                transform: visible
-                  ? active === i ? "scale(1.02)" : "scale(1)"
-                  : "translateY(20px)",
                 transitionDelay: `${i * 100}ms`,
                 transitionDuration: "600ms",
               }}
             >
-              {/* Quote mark */}
-              <div className="text-[48px] font-display font-extrabold text-royal/15 leading-none -mb-2 -mt-1">
-                "
-              </div>
+              {/* Active indicator */}
+              {active === i && (
+                <div className="absolute top-0 left-6 right-6 h-0.5 rounded-full bg-gradient-to-r from-royal to-horizon" />
+              )}
 
-              <p className="text-[13.5px] text-ink/70 leading-relaxed mb-5 italic">
-                {t.quote}
+              <StarRow />
+
+              <p className="text-[13.5px] text-ink/70 leading-relaxed mb-6">
+                &ldquo;{t.quote}&rdquo;
               </p>
 
               <div className="flex items-center gap-3">
@@ -110,7 +122,7 @@ export default function Testimonials() {
               key={i}
               onClick={() => setActive(i)}
               className={`rounded-full transition-all duration-300 cursor-pointer ${
-                active === i ? "w-6 h-2 bg-royal" : "w-2 h-2 bg-slate/40"
+                active === i ? "w-6 h-2 bg-royal" : "w-2 h-2 bg-ink/20"
               }`}
               aria-label={`View testimonial ${i + 1}`}
             />

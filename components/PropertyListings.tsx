@@ -75,8 +75,8 @@ export default function PropertyListings() {
   }, []);
 
   return (
-    <section id="properties" ref={ref} className="py-20 bg-white px-6">
-      <div>
+    <section id="properties" ref={ref} className="py-24 bg-white px-6">
+      <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">
           <p className="text-[10.5px] font-bold text-ink/30 uppercase tracking-[0.2em] mb-3">
