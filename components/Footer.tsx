@@ -19,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2.5 mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bluelib-logo.png`} alt="Blue Liberty" style={{ height: "36px", width: "auto", filter: "brightness(0) invert(1)" }} />
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bluelib-logo.png`} alt="Blue Liberty" style={{ height: "36px", width: "auto", filter: "brightness(1.8) saturate(0.3)" }} />
               <span className="font-display font-bold text-[15px] tracking-tight text-white/80 uppercase">Blue Liberty</span>
             </div>
             <p className="text-white/40 text-[12.5px] leading-relaxed max-w-[260px]">

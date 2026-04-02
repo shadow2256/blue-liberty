@@ -93,12 +93,12 @@ export default function HowItWorks() {
                 transitionDelay: `${i * 150}ms`,
               }}
             >
-              {/* Step badge */}
+              {/* Step icon */}
               <div className="flex items-center gap-3 w-full">
-                <div className="w-9 h-9 rounded-full bg-royal flex items-center justify-center shrink-0 shadow-royal z-10 relative">
-                  <span className="text-[13px] font-extrabold text-white">{step.id}</span>
+                <div className="w-10 h-10 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center shrink-0 z-10 relative shadow-royal">
+                  <step.icon className="w-5 h-5 text-white" strokeWidth={1.8} />
                 </div>
-                <div className="h-px flex-1 border-t border-dashed border-slate/20" />
+                <div className="h-px flex-1 border-t border-dashed border-white/15" />
               </div>
 
               {/* Title */}

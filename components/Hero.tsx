@@ -18,7 +18,7 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
   }, []);
 
   return (
-    <section className="relative min-h-[100svh] flex items-center pt-16 overflow-hidden bg-white">
+    <section className="relative min-h-[100svh] flex items-center pt-16 overflow-hidden bg-gradient-to-br from-mist via-salt-white to-white">
       {/* Subtle background grid */}
       <div
         className="absolute inset-0 pointer-events-none opacity-20"
@@ -34,8 +34,8 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
         <div className="absolute bottom-1/3 right-1/3 w-64 h-64 rounded-full bg-horizon/8 blur-3xl" />
       </div>
 
-      {/* Roofline accent — top right corner */}
-      <svg className="absolute top-16 right-0 w-64 h-48 pointer-events-none opacity-[0.035]" viewBox="0 0 256 192" fill="none" aria-hidden="true">
+      {/* Roofline accent — top right corner, desktop only */}
+      <svg className="absolute top-16 right-0 w-64 h-48 pointer-events-none opacity-[0.035] hidden md:block" viewBox="0 0 256 192" fill="none" aria-hidden="true">
         <path d="M256 96 L192 32 L128 96 L192 96" stroke="#0C176D" strokeWidth="1.5" fill="none" />
         <path d="M256 140 L164 48 L72 140 L164 140" stroke="#2F5BFF" strokeWidth="1" fill="none" />
         <path d="M256 184 L136 64 L16 184 L136 184" stroke="#0FA8FF" strokeWidth="0.75" fill="none" />
@@ -63,8 +63,8 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
 
           {/* Headline */}
           <h1 className="font-display font-extrabold text-ink leading-[1.08] tracking-tight mb-5">
-            <span className="block text-5xl md:text-6xl lg:text-[64px]">Modern Access to</span>
-            <span className="block text-5xl md:text-6xl lg:text-[64px] text-royal">
+            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px]">Modern Access to</span>
+            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px] text-royal">
               Florida Real Estate
             </span>
           </h1>
@@ -77,7 +77,7 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className="flex flex-row gap-3 mb-10 flex-wrap">
             <button
               onClick={onWaitlist}
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-royal text-white font-semibold text-[15px] shadow-royal hover:shadow-royal-lg hover:bg-[#1a47f0] transition-all duration-200 cursor-pointer group"
@@ -87,20 +87,20 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
             </button>
             <a
               href="#how-it-works"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border-2 border-ink/20 text-ink font-semibold text-[15px] hover:border-royal hover:text-royal transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border-2 border-ink/25 text-ink font-semibold text-[15px] hover:border-royal hover:text-royal bg-white/60 transition-all duration-200 cursor-pointer"
             >
               How It Works
             </a>
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-col sm:flex-row gap-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
             {trustBadges.map((badge) => (
-              <div key={badge.label} className="flex items-start gap-2">
-                <div className="w-1 h-8 rounded-full bg-royal/30 shrink-0 mt-0.5" />
+              <div key={badge.label} className="flex items-center gap-2.5">
+                <div className="w-1 h-7 rounded-full bg-royal/30 shrink-0" />
                 <div>
-                  <p className="text-[12.5px] font-bold text-ink uppercase tracking-wide">{badge.label}</p>
-                  <p className="text-[11.5px] text-ink/50">{badge.sub}</p>
+                  <p className="text-[11px] font-bold text-ink uppercase tracking-wider leading-tight">{badge.label}</p>
+                  <p className="text-[11px] text-ink/45 leading-tight">{badge.sub}</p>
                 </div>
               </div>
             ))}
