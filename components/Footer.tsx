@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 const footerLinks = {
   Marketplace: ["How It Works", "Demo", "Properties", "Invest", "FAQ"],
@@ -19,7 +18,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/bluelib-logo.png`} alt="Blue Liberty" width={100} height={40} className="brightness-0 invert" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bluelib-logo.png`} alt="Blue Liberty" style={{ height: "40px", width: "auto", filter: "brightness(0) invert(1)" }} />
             </div>
             <p className="text-white/40 text-[12.5px] leading-relaxed max-w-[260px]">
               Blue Liberty combines premium property access with a cleaner, more modern

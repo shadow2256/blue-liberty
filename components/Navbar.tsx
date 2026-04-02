@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const navLinks = [
   { label: "Marketplace", href: "#properties" },
@@ -34,7 +33,8 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0" aria-label="Blue Liberty home">
-          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/bluelib-logo.png`} alt="Blue Liberty" width={120} height={48} priority />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/bluelib-logo.png`} alt="Blue Liberty" style={{ height: "48px", width: "auto" }} />
         </Link>
 
         {/* Desktop nav */}
