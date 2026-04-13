@@ -86,10 +86,8 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
             </button>
             <a
               href="#how-it-works"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[15px] bg-white transition-all duration-200 cursor-pointer"
-              style={{ border: "2px solid #0C176D", color: "#0C176D" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#2F5BFF"; (e.currentTarget as HTMLAnchorElement).style.color = "#2F5BFF"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.borderColor = "#0C176D"; (e.currentTarget as HTMLAnchorElement).style.color = "#0C176D"; }}
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[15px] transition-all duration-200 cursor-pointer hover:opacity-90"
+              style={{ background: "#EAF1FF", color: "#0C176D" }}
             >
               How It Works
             </a>
