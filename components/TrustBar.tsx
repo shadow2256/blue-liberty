@@ -45,10 +45,7 @@ export default function TrustBar() {
 
         {/* Scrolling track */}
         <div className="ticker-wrapper flex">
-          <div
-            className="ticker-track flex items-center"
-            style={{ animation: "ticker 28s linear infinite" }}
-          >
+          <div className="ticker-track flex items-center">
             {items.map((item, i) => (
               <LogoItem key={i} item={item} />
             ))}
