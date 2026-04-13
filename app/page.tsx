@@ -7,7 +7,6 @@ import TrustBar from "@/components/TrustBar";
 import HowItWorks from "@/components/HowItWorks";
 import PropertyListings from "@/components/PropertyListings";
 import Benefits from "@/components/Benefits";
-import SocialProof from "@/components/SocialProof";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import ActivityTicker from "@/components/ActivityTicker";
@@ -48,8 +47,6 @@ export default function HomePage() {
 
         <PropertyListings />
         <Benefits onWaitlist={() => setWaitlistOpen(true)} />
-
-        <SocialProof />
 
         <Testimonials />
 
