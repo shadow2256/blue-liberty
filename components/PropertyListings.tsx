@@ -6,26 +6,26 @@ import { MapPin } from "lucide-react";
 const properties = [
   {
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=480&h=280&fit=crop&auto=format",
-    location: "Location, Florida",
-    desc: "Transparent fractional property access, beautiful light.",
-    yield: "2.30",
-    entry: "$12,500",
+    location: "Coral Gables, Florida",
+    desc: "3-bed waterfront villa in one of Miami's most stable rental markets. 96% occupancy last year.",
+    yield: "4.20",
+    entry: "$1,500",
     tag: "Prime",
   },
   {
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=480&h=280&fit=crop&auto=format",
-    location: "Location, Florida",
-    desc: "Transparent fractional property access, beautiful light.",
+    location: "Naples, Florida",
+    desc: "Luxury beachfront condo with strong seasonal rental demand and consistent appreciation.",
     yield: "5.30",
-    entry: "$8,000",
+    entry: "$2,000",
     tag: "High Yield",
   },
   {
     image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=480&h=280&fit=crop&auto=format",
-    location: "Esteamma fre lwam",
-    desc: "Transparent fractional property access, beautiful light.",
-    yield: "1.00",
-    entry: "$5,000",
+    location: "Orlando, Florida",
+    desc: "Short-term rental property near major attractions. Ideal first entry into Florida real estate.",
+    yield: "3.80",
+    entry: "$500",
     tag: "Entry Level",
   },
 ];
@@ -131,13 +131,13 @@ export default function PropertyListings() {
                 <div className="grid grid-cols-2 gap-3 pt-3 border-t border-slate/15">
                   <div>
                     <p className="text-[10px] font-bold text-ink/30 uppercase tracking-wide mb-0.5">Target Yield</p>
-                    <p className="text-[18px] font-extrabold text-royal leading-none">
+                    <p className="text-[24px] md:text-[20px] font-extrabold text-royal leading-none">
                       <YieldCounter value={p.yield} />%
                     </p>
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-ink/30 uppercase tracking-wide mb-0.5">Min. Entry</p>
-                    <p className="text-[15px] font-bold text-ink leading-none">{p.entry}</p>
+                    <p className="text-[19px] md:text-[15px] font-bold text-ink leading-none">{p.entry}</p>
                   </div>
                 </div>
               </div>

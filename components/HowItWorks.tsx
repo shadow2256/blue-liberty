@@ -73,9 +73,9 @@ export default function HowItWorks() {
           className="font-display font-extrabold text-white text-center text-4xl md:text-5xl leading-tight tracking-tight mb-16 transition-all duration-700"
           style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(20px)" }}
         >
-          Real Estate Ownership,
+          Three steps to your first
           <br />
-          Built for a New Generation
+          Florida property share
         </h2>
 
         {/* Steps */}
@@ -102,11 +102,11 @@ export default function HowItWorks() {
               </div>
 
               {/* Title */}
-              <h3 className="font-display font-bold text-white text-[17px] leading-snug">
+              <h3 className="font-display font-extrabold text-white text-[20px] leading-snug">
                 {step.title}
               </h3>
 
-              <p className="text-white/50 text-[13.5px] leading-relaxed">
+              <p className="text-white/60 text-[14.5px] font-medium leading-relaxed">
                 {step.description}
               </p>
 
@@ -132,7 +132,7 @@ function PropertyCardMini() {
       <div className="p-3">
         <div className="flex items-center gap-1 text-[10px] text-white/50 mb-1">
           <MapPin className="w-2.5 h-2.5" />
-          <span>Laurindaburg, Florida</span>
+          <span>Miami Beach, Florida</span>
         </div>
         <div className="flex items-center justify-between">
           <span className="text-[13px] font-bold text-white">$350,000</span>

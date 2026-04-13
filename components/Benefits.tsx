@@ -71,7 +71,7 @@ export default function Benefits({ onWaitlist }: { onWaitlist: () => void }) {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-[10.5px] font-bold text-ink/30 uppercase tracking-[0.2em] mb-3">
-            Benefits / Value Grid
+            Why Blue Liberty
           </p>
           <h2
             className="font-display font-extrabold text-ink text-3xl md:text-4xl leading-tight tracking-tight transition-all duration-700"
@@ -102,8 +102,8 @@ export default function Benefits({ onWaitlist }: { onWaitlist: () => void }) {
                 <b.icon className="w-[18px] h-[18px]" style={{ color: b.accent }} strokeWidth={1.8} />
               </div>
 
-              <h3 className="text-[13.5px] font-bold text-ink leading-snug mb-1.5">{b.title}</h3>
-              <p className="text-[12px] text-ink/50 leading-relaxed">{b.desc}</p>
+              <h3 className="text-[15px] font-extrabold text-ink leading-snug mb-1.5">{b.title}</h3>
+              <p className="text-[13.5px] font-medium text-ink/55 leading-relaxed">{b.desc}</p>
 
               {/* Decorative bottom-right accent circle */}
               <div
@@ -127,19 +127,30 @@ export default function Benefits({ onWaitlist }: { onWaitlist: () => void }) {
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-horizon/15 blur-2xl pointer-events-none" />
 
           <div className="relative text-center max-w-lg mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-horizon animate-pulse" />
+              <span className="text-[11px] font-bold text-white/70 uppercase tracking-widest">Limited early access</span>
+            </div>
             <h3 className="font-display font-extrabold text-white text-2xl md:text-3xl leading-tight mb-3">
-              Start Building Ownership on Your Terms
+              Florida real estate. Real yields.<br className="hidden sm:block" /> Starting at $500.
             </h3>
-            <p className="text-white/55 text-[14px] leading-relaxed mb-6">
-              Blue Liberty combines premium property access with a cleaner, more modern ownership experience.
+            <p className="text-white/60 text-[14.5px] font-medium leading-relaxed mb-3">
+              Every property is asset-backed, pre-vetted, and legally structured. You own a real share — not a promise.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-[12.5px] text-white/50 mb-6">
+              <span>✓ Up to 5.3% annual yield</span>
+              <span>✓ No management fees in year 1</span>
+              <span>✓ Exit anytime after 12 months</span>
+            </div>
             <button
               onClick={onWaitlist}
-              className="inline-flex items-center px-7 py-3.5 rounded-xl bg-white font-bold text-[14px] shadow-lg hover:bg-mist transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-white font-bold text-[14px] shadow-lg hover:bg-mist transition-all duration-200 cursor-pointer"
               style={{ color: '#0C176D' }}
             >
-              View Opportunities
+              Claim Your Early Access Spot
+              <span style={{ color: '#2F5BFF' }}>→</span>
             </button>
+            <p className="text-white/30 text-[11px] mt-3">No credit card. No commitment. Cancel anytime.</p>
           </div>
         </div>
 
@@ -149,7 +160,7 @@ export default function Benefits({ onWaitlist }: { onWaitlist: () => void }) {
           style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)" }}
         >
           <p className="text-[10.5px] font-bold text-ink/30 uppercase tracking-[0.2em] mb-4 text-center">
-            Education Cards
+            Resources
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {educationCards.map((card) => (

@@ -63,17 +63,16 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
 
           {/* Headline */}
           <h1 className="font-display font-extrabold text-ink leading-[1.08] tracking-tight mb-5">
-            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px]">Modern Access to</span>
-            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px] text-royal">
-              Florida Real Estate
+            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px]">Own Florida Real Estate.</span>
+            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px] text-royal font-black">
+              From $500.
             </span>
           </h1>
 
           {/* Subtext */}
           <p className="text-ink/60 text-lg leading-relaxed max-w-[420px] mb-8">
-            Transparent fractional property access built around real assets and digital
-            simplicity. Own a piece of premium Florida real estate from{" "}
-            <span className="text-ink font-semibold">$500</span>.
+            Invest in asset-backed properties across Florida&apos;s fastest-growing markets
+            without the barriers of traditional ownership.
           </p>
 
           {/* CTAs */}
@@ -130,7 +129,7 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
                 <MapPin className="w-3 h-3" />
                 <span>Florida Pensile, FL</span>
               </div>
-              <p className="text-[11px] text-ink/60 mb-2">Transparent fractional property access</p>
+              <p className="text-[11px] text-ink/60 mb-2">Waterfront condo · Pensacola Beach</p>
               <div className="flex items-center justify-between">
                 <span className="text-[13px] font-bold text-ink">$345,900</span>
                 <span className="text-[10.5px] px-2 py-0.5 rounded-full bg-royal/10 text-royal font-semibold">

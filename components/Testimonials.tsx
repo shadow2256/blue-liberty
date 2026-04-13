@@ -6,7 +6,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Blue Liberty gives me access to premium Florida real estate I couldn't touch before. Completely transparent, real assets — this is the future of property investing.",
+      "I own shares in two Florida properties without ever having to deal with a bank, a broker, or a down payment. The yield tracking is clear, the documentation is real, and the team actually picks up the phone.",
     name: "James R.",
     role: "Early Investor · Miami, FL",
     avatar: "JR",
@@ -14,19 +14,11 @@ const testimonials = [
   },
   {
     quote:
-      "I've tried other platforms but nothing matches the clarity and quality here. The yield tracking is straightforward and the properties are genuinely curated.",
+      "I put in $2,000 across two listings to test it. Six months later I'm earning passive income and just reinvested. The legal structure is solid — this is proper real estate ownership, not a gimmick.",
     name: "Sophia M.",
     role: "Property Investor · Tampa, FL",
     avatar: "SM",
     color: "bg-ink",
-  },
-  {
-    quote:
-      "Fractional ownership used to feel risky. Blue Liberty changed that — the documentation and ownership structure gives me real confidence in every investment.",
-    name: "Michael J.",
-    role: "Portfolio Builder · Orlando, FL",
-    avatar: "MJ",
-    color: "bg-horizon",
   },
 ];
 
@@ -75,7 +67,7 @@ export default function Testimonials() {
           Built for Real Confidence
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {testimonials.map((t, i) => (
             <div
               key={t.name}
