@@ -86,7 +86,7 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
             </button>
             <a
               href="#how-it-works"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border-2 border-ink/25 text-ink font-semibold text-[15px] hover:border-royal hover:text-royal bg-white/60 transition-all duration-200 cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border-2 border-ink/60 text-ink font-semibold text-[15px] hover:border-royal hover:text-royal bg-white transition-all duration-200 cursor-pointer"
             >
               How It Works
             </a>

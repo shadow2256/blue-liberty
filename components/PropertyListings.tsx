@@ -147,7 +147,7 @@ export default function PropertyListings() {
 
         {/* CTA */}
         <div className="flex justify-center">
-          <button className="inline-flex items-center px-8 py-3.5 rounded-xl border-2 border-royal text-royal font-semibold text-[14.5px] hover:bg-royal hover:text-white transition-all duration-200 cursor-pointer">
+          <button className="inline-flex items-center px-8 py-3.5 rounded-xl border-2 border-royal text-royal font-semibold text-[14.5px] hover:bg-royal hover:text-white hover:border-royal hover:shadow-royal transition-all duration-200 cursor-pointer bg-white">
             View All Properties
           </button>
         </div>
