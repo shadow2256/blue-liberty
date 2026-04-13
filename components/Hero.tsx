@@ -86,10 +86,13 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
             </button>
             <a
               href="#how-it-works"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[15px] transition-all duration-200 cursor-pointer hover:opacity-90"
+              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-[15px] transition-all duration-300 cursor-pointer"
               style={{ background: "#EAF1FF", color: "#0C176D" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#0C176D"; (e.currentTarget as HTMLAnchorElement).style.color = "#fff"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.background = "#EAF1FF"; (e.currentTarget as HTMLAnchorElement).style.color = "#0C176D"; }}
             >
               How It Works
+              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6"/></svg>
             </a>
           </div>
 
