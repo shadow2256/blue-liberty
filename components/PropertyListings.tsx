@@ -147,7 +147,12 @@ export default function PropertyListings() {
 
         {/* CTA */}
         <div className="flex justify-center">
-          <button className="inline-flex items-center px-8 py-3.5 rounded-xl border-2 border-royal text-royal font-semibold text-[14.5px] hover:bg-royal hover:text-white hover:border-royal hover:shadow-royal transition-all duration-200 cursor-pointer bg-white">
+          <button
+            className="inline-flex items-center px-8 py-3.5 rounded-xl font-semibold text-[14.5px] transition-all duration-200 cursor-pointer bg-white"
+            style={{ border: "2px solid #2F5BFF", color: "#2F5BFF" }}
+            onMouseEnter={e => { const b = e.currentTarget; b.style.background = "#2F5BFF"; b.style.color = "#fff"; b.style.boxShadow = "0 4px 20px rgba(47,91,255,0.35)"; }}
+            onMouseLeave={e => { const b = e.currentTarget; b.style.background = "#fff"; b.style.color = "#2F5BFF"; b.style.boxShadow = "none"; }}
+          >
             View All Properties
           </button>
         </div>
