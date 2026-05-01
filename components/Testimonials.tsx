@@ -6,7 +6,7 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "I own shares in two Florida properties without ever having to deal with a bank, a broker, or a down payment. The yield tracking is clear, the documentation is real, and the team actually picks up the phone.",
+      "I own shares in two coastal properties without ever having to deal with a bank, a broker, or a down payment. The yield tracking is clear, the documentation is real, and the team actually picks up the phone.",
     name: "James R.",
     role: "Early Investor · Miami, FL",
     avatar: "JR",

@@ -7,7 +7,7 @@ const benefits = [
   {
     icon: TrendingDown,
     title: "Lower entry threshold",
-    desc: "Access premium Florida real estate from as little as $500.",
+    desc: "Access premium real estate worldwide from as little as $500.",
     accent: "#2F5BFF",
   },
   {
@@ -31,7 +31,7 @@ const benefits = [
   {
     icon: Star,
     title: "Access to curated properties",
-    desc: "Only pre-vetted, high-quality Florida markets make the cut.",
+    desc: "Only pre-vetted, high-quality global markets make the cut.",
     accent: "#0FA8FF",
   },
   {
@@ -132,7 +132,7 @@ export default function Benefits({ onWaitlist }: { onWaitlist: () => void }) {
               <span className="text-[11px] font-bold text-white/70 uppercase tracking-widest">Limited early access</span>
             </div>
             <h3 className="font-display font-extrabold text-white text-2xl md:text-3xl leading-tight mb-3">
-              Florida real estate. Real yields.<br className="hidden sm:block" /> Starting at $500.
+              Real estate. Real yields.<br className="hidden sm:block" /> Borderless. Starting at $500.
             </h3>
             <p className="text-white/60 text-[14.5px] font-medium leading-relaxed mb-3">
               Every property is asset-backed, pre-vetted, and legally structured. You own a real share — not a promise.

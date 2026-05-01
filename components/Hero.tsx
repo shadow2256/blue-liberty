@@ -6,7 +6,7 @@ import { MapPin, TrendingUp, Shield, ChevronRight } from "lucide-react";
 const trustBadges = [
   { icon: Shield, label: "Asset-backed access", sub: "Real property collateral" },
   { icon: Shield, label: "Transparent ownership", sub: "On-chain documentation" },
-  { icon: MapPin, label: "Florida-focused", sub: "Premium market opportunities" },
+  { icon: MapPin, label: "Borderless portfolio", sub: "Florida · Quebec · Europe" },
 ];
 
 export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
@@ -63,16 +63,16 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
 
           {/* Headline */}
           <h1 className="font-display font-extrabold text-ink leading-[1.08] tracking-tight mb-5">
-            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px]">Own Florida Real Estate.</span>
+            <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px]">Own Real Estate.</span>
             <span className="block text-[40px] sm:text-5xl md:text-6xl lg:text-[64px] text-royal font-black">
-              From $500.
+              Anywhere. From $500.
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="text-ink/60 text-lg leading-relaxed max-w-[420px] mb-8">
-            Invest in asset-backed properties across Florida&apos;s fastest-growing markets
-            without the barriers of traditional ownership.
+          <p className="text-ink/60 text-lg leading-relaxed max-w-[440px] mb-8">
+            Tokenized fractional access to income-producing properties — launching in Florida,
+            expanding to Quebec, Europe, and beyond. Asset-backed. On-chain. Transparent.
           </p>
 
           {/* CTAs */}
@@ -131,13 +131,13 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
             <div className="p-3">
               <div className="flex items-center gap-1 text-[10.5px] text-ink/50 mb-1">
                 <MapPin className="w-3 h-3" />
-                <span>Florida Pensile, FL</span>
+                <span>Pompano Beach, FL</span>
               </div>
-              <p className="text-[11px] text-ink/60 mb-2">Waterfront condo · Pensacola Beach</p>
+              <p className="text-[11px] text-ink/60 mb-2">Coastal property · Phase 1 · Live</p>
               <div className="flex items-center justify-between">
-                <span className="text-[13px] font-bold text-ink">$345,900</span>
-                <span className="text-[10.5px] px-2 py-0.5 rounded-full bg-royal/10 text-royal font-semibold">
-                  Invest
+                <span className="text-[13px] font-bold text-ink">$500,000</span>
+                <span className="text-[10.5px] px-2 py-0.5 rounded-full bg-horizon/15 text-horizon font-semibold">
+                  +58% 5yr
                 </span>
               </div>
             </div>
@@ -215,12 +215,12 @@ export default function Hero({ onWaitlist }: { onWaitlist: () => void }) {
               aria-label="Florida luxury villa"
             />
             <div className="px-3 py-2">
-              <p className="text-[10.5px] font-semibold text-ink">High National Florida Miseem</p>
-              <p className="text-[9.5px] text-ink/40 mb-1.5">Allen unoountained property</p>
+              <p className="text-[10.5px] font-semibold text-ink">Mont-Tremblant, QC</p>
+              <p className="text-[9.5px] text-ink/40 mb-1.5">Ski chalets · 100 units · Pipeline</p>
               <div className="flex items-center justify-between">
-                <span className="text-[12.5px] font-bold text-ink">$240,000</span>
-                <span className="text-[9.5px] px-2 py-0.5 rounded-full bg-green-50 text-green-600 font-semibold">
-                  Save 4.3%
+                <span className="text-[12.5px] font-bold text-ink">Coming soon</span>
+                <span className="text-[9.5px] px-2 py-0.5 rounded-full bg-horizon/15 text-horizon font-semibold">
+                  Year-round
                 </span>
               </div>
             </div>

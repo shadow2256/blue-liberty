@@ -6,11 +6,12 @@ import { MapPin } from "lucide-react";
 const properties = [
   {
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=480&h=280&fit=crop&auto=format",
-    location: "Coral Gables, Florida",
-    desc: "3-bed waterfront villa in one of Miami's most stable rental markets. 96% occupancy last year.",
-    yield: "4.20",
-    entry: "$1,500",
-    tag: "Prime",
+    location: "Pompano Beach, Florida",
+    desc: "Already-owned, mortgage-free coastal property. Active development surrounding the block — new mixed-use, beachfront revitalization, and Brightline expansion driving above-market appreciation.",
+    yield: "5.90",
+    entry: "$500",
+    tag: "Phase 1 · Live",
+    appreciation: "+58% (5yr)",
   },
   {
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=480&h=280&fit=crop&auto=format",
@@ -18,15 +19,17 @@ const properties = [
     desc: "Luxury beachfront condo with strong seasonal rental demand and consistent appreciation.",
     yield: "5.30",
     entry: "$2,000",
-    tag: "High Yield",
+    tag: "Pipeline",
+    appreciation: "+62% (5yr)",
   },
   {
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=480&h=280&fit=crop&auto=format",
-    location: "Orlando, Florida",
-    desc: "Short-term rental property near major attractions. Ideal first entry into Florida real estate.",
-    yield: "3.80",
+    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=480&h=280&fit=crop&auto=format",
+    location: "Mont-Tremblant, Quebec",
+    desc: "Ski chalet portfolio (~100 units) from established operator. Year-round rental income from winter ski + summer outdoor demand.",
+    yield: "6.50",
     entry: "$500",
-    tag: "Entry Level",
+    tag: "Pipeline",
+    appreciation: "+47% (5yr)",
   },
 ];
 
@@ -86,10 +89,17 @@ export default function PropertyListings() {
             className="font-display font-extrabold text-ink text-4xl md:text-5xl leading-tight tracking-tight transition-all duration-700"
             style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)" }}
           >
-            Invest in Fractional
+            Fractional Real Estate.
             <br />
-            Florida Properties
+            <span className="text-royal">Across borders.</span>
           </h2>
+          <p
+            className="text-ink/55 text-[15px] leading-relaxed mt-4 max-w-2xl mx-auto transition-all duration-700"
+            style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transitionDelay: "150ms" }}
+          >
+            Florida launches first. Active pipeline includes Florida coastal properties, Quebec ski chalets,
+            and select European assets. Each property tokenized in its own LLC for full risk isolation.
+          </p>
         </div>
 
         {/* Cards */}
@@ -128,16 +138,20 @@ export default function PropertyListings() {
                 </div>
                 <p className="text-[12px] text-ink/50 mb-3 leading-relaxed">{p.desc}</p>
 
-                <div className="grid grid-cols-2 gap-3 pt-3 border-t border-slate/15">
+                <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate/15">
                   <div>
-                    <p className="text-[10px] font-bold text-ink/30 uppercase tracking-wide mb-0.5">Target Yield</p>
-                    <p className="text-[24px] md:text-[20px] font-extrabold text-royal leading-none">
+                    <p className="text-[10px] font-bold text-ink/30 uppercase tracking-wide mb-0.5">Yield</p>
+                    <p className="text-[18px] md:text-[15px] font-extrabold text-royal leading-none">
                       <YieldCounter value={p.yield} />%
                     </p>
                   </div>
                   <div>
-                    <p className="text-[10px] font-bold text-ink/30 uppercase tracking-wide mb-0.5">Min. Entry</p>
-                    <p className="text-[19px] md:text-[15px] font-bold text-ink leading-none">{p.entry}</p>
+                    <p className="text-[10px] font-bold text-ink/30 uppercase tracking-wide mb-0.5">5yr ↑</p>
+                    <p className="text-[18px] md:text-[15px] font-extrabold text-horizon leading-none">{p.appreciation}</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-bold text-ink/30 uppercase tracking-wide mb-0.5">Entry</p>
+                    <p className="text-[18px] md:text-[15px] font-bold text-ink leading-none">{p.entry}</p>
                   </div>
                 </div>
               </div>

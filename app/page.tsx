@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import HowItWorks from "@/components/HowItWorks";
 import PropertyListings from "@/components/PropertyListings";
+import PompanoSpotlight from "@/components/PompanoSpotlight";
 import Benefits from "@/components/Benefits";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
@@ -29,7 +30,7 @@ export default function HomePage() {
           <div className="max-w-2xl mx-auto px-6 text-center">
             <p className="text-[11px] font-bold text-ink/30 uppercase tracking-[0.2em] mb-3">Early Access</p>
             <h2 className="font-display font-extrabold text-ink text-2xl md:text-3xl leading-tight tracking-tight mb-3">
-              Ready to own your first Florida property share?
+              Ready to own your first real estate share?
             </h2>
             <p className="text-ink/50 text-[14.5px] leading-relaxed mb-6">
               Join 312+ investors already on the waitlist. Spots are limited — founding rates won&apos;t last.
@@ -46,6 +47,7 @@ export default function HomePage() {
         </section>
 
         <PropertyListings />
+        <PompanoSpotlight />
         <Benefits onWaitlist={() => setWaitlistOpen(true)} />
 
         <Testimonials />
@@ -64,7 +66,7 @@ export default function HomePage() {
             </h2>
             <p className="text-ink/55 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
               Founding members lock in exclusive rates and get first pick of premium
-              Florida properties before we open to the public.
+              tokenized properties — Florida launch, Quebec and Europe pipeline — before we open to the public.
             </p>
             <button
               onClick={() => setWaitlistOpen(true)}

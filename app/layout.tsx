@@ -16,13 +16,13 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Blue Liberty — Modern Access to Florida Real Estate",
+  title: "Blue Liberty — Tokenized Real Estate. Anywhere.",
   description:
-    "Transparent fractional property access built around real assets and digital simplicity. Join the waitlist for early access to premium Florida real estate investment.",
+    "Borderless fractional access to income-producing real estate — launching in Florida, expanding to Quebec, Europe, and beyond. Asset-backed, on-chain, transparent.",
   openGraph: {
-    title: "Blue Liberty — Modern Access to Florida Real Estate",
+    title: "Blue Liberty — Tokenized Real Estate. Anywhere.",
     description:
-      "Fractional property access built around real assets and digital simplicity.",
+      "Borderless fractional access to real estate. Florida launch, global pipeline.",
     type: "website",
   },
 };

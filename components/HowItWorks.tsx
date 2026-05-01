@@ -6,8 +6,8 @@ import { MapPin, TrendingUp, BarChart2 } from "lucide-react";
 const steps = [
   {
     id: "A",
-    title: "Discover premium Florida properties",
-    description: "Browse curated, asset-backed properties across Florida's highest-growth markets.",
+    title: "Discover premium properties worldwide",
+    description: "Browse curated, asset-backed properties across high-growth markets — Florida coastal, Quebec mountain, European urban.",
     icon: MapPin,
     visual: <PropertyCardMini />,
   },
@@ -21,7 +21,7 @@ const steps = [
   {
     id: "C",
     title: "Build long-term ownership exposure",
-    description: "Compound your ownership stake across multiple premium Florida properties.",
+    description: "Compound your ownership stake across multiple premium properties on multiple continents.",
     icon: TrendingUp,
     visual: <PortfolioMini />,
   },
@@ -75,7 +75,7 @@ export default function HowItWorks() {
         >
           Three steps to your first
           <br />
-          Florida property share
+          fractional property share
         </h2>
 
         {/* Steps */}
