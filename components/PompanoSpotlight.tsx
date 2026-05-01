@@ -1,14 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { TrendingUp, Building2, Train, Waves } from "lucide-react";
+import { TrendingUp, Building2, Train, Waves, Sparkles } from "lucide-react";
 
 const catalysts = [
-  {
-    icon: Building2,
-    title: "Mixed-use developments",
-    desc: "New retail, dining, and entertainment density rising within walking distance of the property.",
-  },
   {
     icon: Waves,
     title: "Beachfront revitalization",
@@ -20,9 +15,14 @@ const catalysts = [
     desc: "Planned high-speed rail extension cutting commute time to Fort Lauderdale and Miami.",
   },
   {
-    icon: TrendingUp,
+    icon: Building2,
     title: "Adjacent luxury towers",
     desc: "Nearby condo and rental developments lifting comparable property values across surrounding blocks.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Florida baseline appreciation",
+    desc: "+58% over 5 years state-wide. Coastal Broward consistently outperforming.",
   },
 ];
 
@@ -84,8 +84,75 @@ export default function PompanoSpotlight() {
             }}
           >
             Florida residential real estate appreciated <strong className="text-white">+58% over the past five years</strong>. The
-            block surrounding our Pompano Beach property is now the focus of multiple infrastructure and
-            development projects expected to compound that trajectory.
+            block surrounding our Pompano Beach property is anchored by <strong className="text-white">one of South Florida&apos;s largest
+            mixed-use projects in a generation</strong> — directly compounding that trajectory.
+          </p>
+        </div>
+
+        {/* THE POMP — featured catalyst */}
+        <div
+          className="rounded-2xl p-6 md:p-8 mb-8 transition-all duration-700"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(47,91,255,0.18), rgba(15,168,255,0.12))",
+            border: "1px solid rgba(15,168,255,0.35)",
+            backdropFilter: "blur(8px)",
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(20px)",
+            transitionDelay: "180ms",
+          }}
+        >
+          <div className="flex items-start gap-4 mb-5">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-horizon/25 border border-horizon/40">
+              <Sparkles className="w-6 h-6 text-horizon" />
+            </div>
+            <div className="flex-1">
+              <p className="text-horizon text-[10.5px] font-bold uppercase tracking-[0.2em] mb-1">
+                Featured Catalyst
+              </p>
+              <h3 className="font-display font-extrabold text-white text-2xl md:text-[28px] leading-tight tracking-tight">
+                The Pomp — $2B mixed-use development next door
+              </h3>
+            </div>
+          </div>
+
+          <p className="text-white/80 text-[14px] leading-relaxed mb-5">
+            <strong className="text-white">The Cordish Companies + Caesars Entertainment</strong> are
+            transforming the 223-acre former Pompano Park racetrack into a premier entertainment and
+            residential destination. Anchored by Harrah&apos;s Pompano Beach Casino and the recently
+            opened Topgolf, the development will add:
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+            {[
+              { v: "$2B", l: "Total investment" },
+              { v: "223 ac", l: "Site size" },
+              { v: "1.3M sqft", l: "Retail / entertainment" },
+              { v: "4,000", l: "Luxury residential units" },
+              { v: "2", l: "Hotels" },
+              { v: "Class A", l: "Office space" },
+              { v: "Live", l: "Topgolf · open" },
+              { v: "Casino", l: "Harrah's anchor" },
+            ].map((stat) => (
+              <div
+                key={stat.l}
+                className="bg-white/5 border border-white/10 rounded-xl p-3 text-center"
+              >
+                <p className="text-white font-display font-extrabold text-[18px] md:text-[19px] leading-none mb-1">
+                  {stat.v}
+                </p>
+                <p className="text-white/55 text-[10.5px] uppercase tracking-wide font-semibold leading-tight">
+                  {stat.l}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-white/65 text-[12.5px] leading-relaxed italic">
+            A development of this scale, anchored by two major institutional sponsors, lifts comparable
+            property values across the surrounding submarket for years. The BL Property #1 asset sits
+            inside this catchment — directly capturing the uplift without paying the new-construction
+            premium.
           </p>
         </div>
 
